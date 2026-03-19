@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cronograma de estudos para a Defensoria Pública do Maranhão — Reta Final">
+<meta name="theme-color" content="#3a7d44">
+<title>DPE Maranhão — Reta Final</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* ─── Reset & Base ─────────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream:        #faf6ee;
+  --cream2:       #f2e8d4;
+  --cream3:       #e8dcca;
+  --parchment:    #d9ccba;
+  --green:        #2e6b38;
+  --green-mid:    #4a8c55;
+  --green-lt:     #96c9a0;
+  --green-pale:   #cce8d2;
+  --green-xp:     #e8f5eb;
+  --brown:        #6e5030;
+  --brown-lt:     #a07850;
+  --text:         #26200e;
+  --text-mid:     #4e4028;
+  --text-soft:    #857258;
+  --white:        #fffdf8;
+  --border:       #d9ccba;
+  --shadow:       rgba(70, 50, 20, 0.09);
+  --shadow-md:    rgba(70, 50, 20, 0.14);
+  --red-bg:       #fee8e8;
+  --red-bd:       #fbbaba;
+  --red-txt:      #8b1a1a;
+  --yel-bg:       #fef8e2;
+  --yel-bd:       #f5d97a;
+  --yel-txt:      #6b4a08;
+  --blu-bg:       #e4effe;
+  --blu-bd:       #a0bfee;
+  --blu-txt:      #1a3a80;
+  --radius:       14px;
+  --radius-sm:    8px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 5% 0%,   rgba(150, 201, 160, 0.22) 0%, transparent 100%),
+    radial-gradient(ellipse 50% 35% at 95% 100%, rgba(150, 201, 160, 0.16) 0%, transparent 100%);
+}
+
+/* ─── Typography ───────────────────────────────────────────────── */
+.serif      { font-family: 'Playfair Display', serif; }
+.serif-it   { font-family: 'Playfair Display', serif; font-style: italic; }
+.sans-lt    { font-family: 'Nunito Sans', sans-serif; font-weight: 300; }
+
+/* ─── Layout ───────────────────────────────────────────────────── */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 48px 20px 100px;
+}
+
+/* ─── Header ───────────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  margin-bottom: 36px;
+  animation: rise 0.65s cubic-bezier(.22,1,.36,1) both;
+}
+
+.header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: var(--green-xp);
+  border: 2px solid var(--green-lt);
+  border-radius: 50%;
+  margin-bottom: 14px;
+  font-size: 32px;
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 6vw, 64px);
+  font-weight: 900;
+  color: var(--green);
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.header h1 em {
+  font-style: italic;
+  color: var(--brown);
+}
+
+.header-divider {
+  width: 64px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green-lt), transparent);
+  margin: 14px auto;
+  border-radius: 2px;
+}
+
+.header-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+/* ─── Cards ────────────────────────────────────────────────────── */
+.card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ─── Lema ─────────────────────────────────────────────────────── */
+.lema {
+  background: var(--white);
+  border: 1.5px solid var(--green-lt);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin-bottom: 18px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--green);
+  box-shadow: 0 2px 12px var(--shadow);
+  text-align: center;
+  animation: rise 0.65s ease 0.07s both;
+  background-image: linear-gradient(135deg, var(--green-xp) 0%, transparent 55%);
+}
+
+/* ─── Missão ───────────────────────────────────────────────────── */
+.missao-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.missao-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-mid);
+  cursor: pointer;
+  padding: 9px 13px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: var(--cream);
+  transition: all 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.missao-item:hover  { border-color: var(--green-lt); background: var(--green-xp); }
+.missao-item.done   { color: var(--green); background: var(--green-pale); border-color: var(--green-lt); }
+
+.chk-box {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  transition: all 0.18s;
+  background: var(--white);
+  color: transparent;
+}
+
+.missao-item.done .chk-box {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+/* ─── Controls ─────────────────────────────────────────────────── */
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  animation: rise 0.65s ease 0.16s both;
+}
+
+.week-toggle {
+  display: flex;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
+  box-shadow: 0 1px 8px var(--shadow);
+}
+
+.week-btn {
+  padding: 8px 22px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.week-btn.active {
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(46, 107, 56, 0.28);
+}
+
+.controls-hint {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+/* ─── Progress ─────────────────────────────────────────────────── */
+.progress-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 15px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 12px var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  animation: rise 0.65s ease 0.18s both;
+}
+
+.prog-emoji { font-size: 28px; flex-shrink: 0; }
+
+.prog-info  { flex: 1; min-width: 0; }
+
+.prog-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+
+.bar-track {
+  height: 8px;
+  background: var(--cream2);
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green-mid), var(--green));
+  border-radius: 99px;
+  transition: width 0.45s cubic-bezier(.22,1,.36,1);
+  width: 0%;
+}
+
+.prog-pct {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--green);
+  min-width: 54px;
+  text-align: right;
+  line-height: 1;
+}
+
+/* ─── Day Cards ────────────────────────────────────────────────── */
+.schedule { animation: rise 0.65s ease 0.22s both; }
+
+.day-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.day-card:hover { border-color: var(--green-lt); }
+
+.day-card.complete {
+  border-color: var(--green-lt);
+  box-shadow: 0 3px 18px rgba(46,107,56,0.11);
+  background: linear-gradient(135deg, var(--green-xp) 0%, var(--white) 28%);
+}
+
+.day-header {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.day-pill-wrap { text-align: center; }
+
+.day-pill {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 5px 8px;
+  border-radius: 6px;
+  min-width: 44px;
+  text-align: center;
+}
+
+.day-card[data-weekend="true"] .day-pill { background: var(--brown); }
+.day-card.complete .day-pill { background: var(--green); }
+
+.day-info    { min-width: 0; }
+.day-subject {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.day-card.complete .day-subject { color: var(--green); }
+.day-card[data-weekend="true"] .day-subject { color: var(--brown); }
+.day-card[data-weekend="true"].complete .day-subject { color: var(--green); }
+
+.day-meta {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11px;
+  color: var(--text-soft);
+  margin-top: 2px;
+}
+
+.day-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.dots { display: flex; gap: 4px; }
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cream3);
+  transition: background 0.2s;
+}
+
+.dot.done { background: var(--green); }
+
+.chevron {
+  font-size: 11px;
+  color: var(--text-soft);
+  transition: transform 0.28s ease;
+  flex-shrink: 0;
+}
+
+.day-card.open .chevron { transform: rotate(180deg); }
+
+.day-body {
+  display: none;
+  padding: 0 18px 16px;
+  border-top: 1.5px solid var(--cream2);
+}
+
+.day-card.open .day-body { display: block; }
+
+/* ─── Blocks grid ──────────────────────────────────────────────── */
+.blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.block {
+  background: var(--cream);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 13px 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.block:hover {
+  border-color: var(--green-lt);
+  background: var(--green-xp);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 107, 56, 0.1);
+}
+
+.block.checked {
+  background: var(--green-pale);
+  border-color: var(--green-lt);
+}
+
+.block-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+/* Tags */
+.tag {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 2.5px 7px;
+  border-radius: 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tag-atq { background: var(--green-pale); color: var(--green);   border: 1px solid var(--green-lt); }
+.tag-rev { background: var(--yel-bg);     color: var(--yel-txt); border: 1px solid var(--yel-bd);  }
+.tag-sim { background: var(--red-bg);     color: var(--red-txt); border: 1px solid var(--red-bd);  }
+.tag-con { background: var(--blu-bg);     color: var(--blu-txt); border: 1px solid var(--blu-bd);  }
+
+.block-chk {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: transparent;
+  transition: all 0.18s;
+  background: var(--white);
+  flex-shrink: 0;
+}
+
+.block.checked .block-chk {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+
+.block-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.block.checked .block-name { color: var(--green); }
+
+.block-time {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+/* ─── Regras ───────────────────────────────────────────────────── */
+.regras-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+@media (max-width: 520px) { .regras-grid { grid-template-columns: 1fr; } }
+
+.regra {
+  padding: 11px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.3;
+}
+
+.regra.no  { background: var(--red-bg);  border: 1.5px solid var(--red-bd);  color: var(--red-txt); }
+.regra.yes { background: var(--green-xp); border: 1.5px solid var(--green-lt); color: var(--green); }
+
+/* ─── Meta numérica ────────────────────────────────────────────── */
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.meta-field label {
+  display: block;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+
+.meta-field input {
+  width: 100%;
+  background: var(--cream);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 13px;
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+}
+
+.meta-field input:focus {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(74,140,85,0.14);
+}
+
+.meta-field input::placeholder { color: var(--text-soft); font-weight: 400; }
+
+/* ─── Anotações ────────────────────────────────────────────────── */
+.notas-area {
+  width: 100%;
+  min-height: 120px;
+  background: var(--cream);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  color: var(--text);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  line-height: 1.7;
+}
+
+.notas-area:focus {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(74,140,85,0.14);
+}
+
+.notas-area::placeholder { color: var(--text-soft); }
+
+/* ─── Buttons ──────────────────────────────────────────────────── */
+.btn-ghost {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text-soft);
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 16px;
+}
+
+.btn-ghost:hover {
+  border-color: var(--red-bd);
+  color: var(--red-txt);
+  background: var(--red-bg);
+}
+
+/* ─── Toast ────────────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--green);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(46, 107, 56, 0.32);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.28s ease;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.toast.show { opacity: 1; transform: translateY(0); }
+
+/* ─── Animações ────────────────────────────────────────────────── */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Responsivo ───────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .container { padding: 28px 14px 80px; }
+  .day-header { grid-template-columns: 60px 1fr auto; gap: 8px; padding: 11px 14px; }
+  .day-pill { font-size: 12px; padding: 4px 7px; min-width: 38px; }
+  .blocks-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 7px; }
+  .dots { display: none; }
+  .missao-grid { grid-template-columns: 1fr; }
+  .regras-grid { grid-template-columns: 1fr; }
+  .controls-hint { display: none; }
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream2); }
+::-webkit-scrollbar-thumb { background: var(--green-lt); border-radius: 6px; }
+
+/* ─── PWA install banner ───────────────────────────────────────── */
+.install-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-top: 1.5px solid var(--green-lt);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 -4px 20px var(--shadow-md);
+  z-index: 9998;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.install-banner.show { transform: translateY(0); }
+
+.install-banner p { font-size: 13px; font-weight: 600; color: var(--text-mid); }
+.install-banner p span { display: block; font-size: 11px; font-weight: 400; color: var(--text-soft); margin-top: 2px; }
+
+.install-banner-btns { display: flex; gap: 8px; flex-shrink: 0; }
+
+.btn-install {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-dismiss {
+  background: transparent;
+  color: var(--text-soft);
+  border: 1.5px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-icon">⚖️</div>
+    <h1>Defensoria Pública<br><em>Reta Final</em></h1>
+    <div class="header-divider"></div>
+    <p class="header-sub">✨ DPE Maranhão &nbsp;·&nbsp; 6 h Líquidas &nbsp;·&nbsp; Foco Total</p>
+  </header>
+
+  <!-- Lema -->
+  <div class="lema" style="animation: rise 0.65s ease 0.06s both;">
+    🌿 &ldquo;Constância estratégica vence talento disperso.&rdquo; 🌿
+  </div>
+
+  <!-- Missão -->
+  <div class="card" style="animation: rise 0.65s ease 0.1s both;">
+    <div class="card-title">🎯 Missão da Semana</div>
+    <div class="missao-grid" id="missao-grid">
+      <div class="missao-item" data-id="m0" onclick="toggleMissao(this)"><div class="chk-box">✓</div><span>📝 Bater a meta mínima de questões (150+)</span></div>
+      <div class="missao-item" data-id="m1" onclick="toggleMissao(this)"><div class="chk-box">✓</div><span>⏱️ 1 simulado objetivo cronometrado</span></div>
+      <div class="missao-item" data-id="m2" onclick="toggleMissao(this)"><div class="chk-box">✓</div><span>✍️ 1 simulado discursivo completo</span></div>
+      <div class="missao-item" data-id="m3" onclick="toggleMissao(this)"><div class="chk-box">✓</div><span>🔍 Revisar TODOS os erros da semana</span></div>
+      <div class="missao-item" data-id="m4" onclick="toggleMissao(this)"><div class="chk-box">✓</div><span>🔥 Não falhar nenhum dia</span></div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls-row">
+    <div class="week-toggle">
+      <button class="week-btn active" id="btn-a" onclick="setWeek('A', this)">📅 Semana A</button>
+      <button class="week-btn"        id="btn-b" onclick="setWeek('B', this)">📅 Semana B</button>
+    </div>
+    <span class="controls-hint">👆 Clique em cada bloco para marcar como concluído</span>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-card">
+    <div class="prog-emoji" id="prog-emoji">🌱</div>
+    <div class="prog-info">
+      <div class="prog-label">Progresso Semanal</div>
+      <div class="bar-track"><div class="bar-fill" id="bar-fill"></div></div>
+    </div>
+    <div class="prog-pct" id="prog-pct">0%</div>
+  </div>
+
+  <!-- Schedule -->
+  <section class="schedule" id="schedule" aria-label="Cronograma semanal"></section>
+
+  <!-- Regras -->
+  <div class="card" style="margin-top: 24px; animation: rise 0.65s ease 0.28s both;">
+    <div class="card-title">⚔️ Regras do Modo Guerra</div>
+    <div class="regras-grid">
+      <div class="regra no">❌ Não estudar de forma passiva</div>
+      <div class="regra yes">✅ Todo erro vira flashcard no Anki</div>
+      <div class="regra no">❌ Não pular a revisão do dia</div>
+      <div class="regra yes">✅ Toda peça é feita dentro do tempo</div>
+      <div class="regra no">❌ Não acumular erros sem registrar</div>
+      <div class="regra yes">✅ Todo simulado é cronometrado</div>
+      <div class="regra no">❌ Não estudar sem cronômetro ativo</div>
+      <div class="regra yes">✅ Domingo é consolidação — não descanso</div>
+    </div>
+  </div>
+
+  <!-- Meta Numérica -->
+  <div class="card" style="animation: rise 0.65s ease 0.3s both;">
+    <div class="card-title">📊 Meta Numérica da Semana</div>
+    <div class="meta-grid">
+      <div class="meta-field">
+        <label>📝 Questões Resolvidas</label>
+        <input type="number" id="meta-q" placeholder="Meta mínima: 150" oninput="saveMeta()" min="0">
+      </div>
+      <div class="meta-field">
+        <label>🎯 Percentual de Acerto</label>
+        <input type="text" id="meta-acerto" placeholder="ex.: 72%" oninput="saveMeta()">
+      </div>
+      <div class="meta-field">
+        <label>📋 Simulado Objetivo</label>
+        <input type="text" id="meta-obj" placeholder="Nota" oninput="saveMeta()">
+      </div>
+      <div class="meta-field">
+        <label>✍️ Discursiva</label>
+        <input type="text" id="meta-disc" placeholder="Nota" oninput="saveMeta()">
+      </div>
+    </div>
+  </div>
+
+  <!-- Anotações -->
+  <div class="card" style="animation: rise 0.65s ease 0.32s both;">
+    <div class="card-title">📌 Pontos Fracos e Anotações</div>
+    <textarea class="notas-area" id="notas" placeholder="Anote aqui suas dificuldades, temas para revisar, erros recorrentes..." oninput="saveMeta()"></textarea>
+  </div>
+
+  <!-- Reflexão -->
+  <div class="card" style="animation: rise 0.65s ease 0.34s both;">
+    <div class="card-title">💭 Reflexão do Domingo</div>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div class="meta-field">
+        <label>O que funcionou bem esta semana?</label>
+        <input type="text" id="refl-1" placeholder="Escreva aqui..." oninput="saveMeta()">
+      </div>
+      <div class="meta-field">
+        <label>O que precisa melhorar na próxima semana?</label>
+        <input type="text" id="refl-2" placeholder="Escreva aqui..." oninput="saveMeta()">
+      </div>
+      <div class="meta-field">
+        <label>Minha meta principal para a próxima semana:</label>
+        <input type="text" id="refl-3" placeholder="Escreva aqui..." oninput="saveMeta()">
+      </div>
+    </div>
+    <button class="btn-ghost" onclick="resetAll()">🔄 Resetar semana completa</button>
+  </div>
+
+</div><!-- /container -->
+
+<div class="toast" id="toast">✨ Salvo automaticamente</div>
+<div class="install-banner" id="install-banner">
+  <p>Instalar no seu dispositivo <span>Acesse offline no celular ou tablet</span></p>
+  <div class="install-banner-btns">
+    <button class="btn-dismiss" onclick="dismissInstall()">Agora não</button>
+    <button class="btn-install" id="btn-install-pwa">📲 Instalar</button>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+// ─── Dados ─────────────────────────────────────────────────────────
+const WEEK_A = [
+  { day: 'SEG', subject: '⚖️ Constitucional',     weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Constitucional — Metas',      time: '2 h',    tag: 'atq' },
+    { label: 'Const. Questões',             time: '1h 20',  tag: 'atq' },
+    { label: 'Const. Discursiva',           time: '40 min', tag: 'rev' },
+    { label: 'Anki + Erros',               time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'TER', subject: '🌍 Direitos Humanos',   weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Dir. Humanos — Metas',        time: '2 h',    tag: 'atq' },
+    { label: 'DH Questões',                 time: '1h 20',  tag: 'atq' },
+    { label: 'DH Discursiva',               time: '40 min', tag: 'rev' },
+    { label: 'Anki + Erros',               time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'QUA', subject: '🔒 Penal',               weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Penal — Metas',               time: '2 h',    tag: 'atq' },
+    { label: 'Penal Questões',              time: '1h 20',  tag: 'atq' },
+    { label: 'Peça Criminal',              time: '40 min', tag: 'rev' },
+    { label: 'Anki + Erros',               time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'QUI', subject: '🏛️ Administrativo',      weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Administrativo — Metas',      time: '2 h',    tag: 'atq' },
+    { label: 'Adm. Questões',               time: '1h 20',  tag: 'atq' },
+    { label: 'Adm. Discursiva',             time: '40 min', tag: 'rev' },
+    { label: 'Anki + Erros',               time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'SEX', subject: '👥 Difusos / Coletivos', weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Difusos/Coletivos — Metas',   time: '2 h',    tag: 'atq' },
+    { label: 'Buy Out',                     time: '1h 20',  tag: 'rev' },
+    { label: 'Coletivos Discursiva',        time: '40 min', tag: 'rev' },
+    { label: 'Revisão + Anki',             time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'SÁB', subject: '🏆 Simulado Objetivo',   weekend: true,  blocks: [
+    { label: 'Simulado Objetivo',           time: '3 h',    tag: 'sim' },
+    { label: 'Correção',                    time: '1 h',    tag: 'rev' },
+    { label: 'Revisão de Erros',            time: '1 h',    tag: 'rev' },
+    { label: 'Lei Seca',                    time: '1 h',    tag: 'atq' },
+  ]},
+  { day: 'DOM', subject: '🔥 Simulado Discursivo',  weekend: true,  blocks: [
+    { label: 'Simulado Discursivo',         time: '3 h',    tag: 'sim' },
+    { label: 'Correção',                    time: '1 h',    tag: 'rev' },
+    { label: 'Revisão Geral',               time: '1 h',    tag: 'rev' },
+    { label: 'Anki Pesado',                 time: '1 h',    tag: 'con' },
+  ]},
+];
+
+const WEEK_B = [
+  { day: 'SEG', subject: '⚖️ Constitucional',     weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Constitucional — Metas',      time: '2 h',    tag: 'atq' },
+    { label: 'Const. Questões',             time: '1h 20',  tag: 'atq' },
+    { label: 'Const. Discursiva',           time: '40 min', tag: 'rev' },
+    { label: 'Anki + Erros',               time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'TER', subject: '🌍 Direitos Humanos',   weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Dir. Humanos — Metas',        time: '2 h',    tag: 'atq' },
+    { label: 'DH Questões',                 time: '1h 20',  tag: 'atq' },
+    { label: 'DH Discursiva',               time: '40 min', tag: 'rev' },
+    { label: 'Anki + Erros',               time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'QUA', subject: '🔒 Penal',               weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Penal — Metas',               time: '2 h',    tag: 'atq' },
+    { label: 'Penal Questões',              time: '1h 20',  tag: 'atq' },
+    { label: 'Peça Criminal',              time: '40 min', tag: 'rev' },
+    { label: 'Anki + Erros',               time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'QUI', subject: '🏛️ Administrativo',      weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Administrativo — Metas',      time: '2 h',    tag: 'atq' },
+    { label: 'Adm. Questões',               time: '1h 20',  tag: 'atq' },
+    { label: 'Adm. Discursiva',             time: '40 min', tag: 'rev' },
+    { label: 'Anki + Erros',               time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'SEX', subject: '🏥 Saúde',               weekend: false, blocks: [
+    { label: 'Lei Seca',                    time: '40 min', tag: 'atq' },
+    { label: 'Saúde — Metas',               time: '2 h',    tag: 'atq' },
+    { label: 'Buy Out',                     time: '1h 20',  tag: 'rev' },
+    { label: 'Saúde Discursiva',            time: '40 min', tag: 'rev' },
+    { label: 'Revisão + Anki',             time: '1h 20',  tag: 'con' },
+  ]},
+  { day: 'SÁB', subject: '🏆 Simulado Objetivo',   weekend: true,  blocks: [
+    { label: 'Simulado Objetivo',           time: '3 h',    tag: 'sim' },
+    { label: 'Correção',                    time: '1 h',    tag: 'rev' },
+    { label: 'Revisão de Erros',            time: '1 h',    tag: 'rev' },
+    { label: 'Lei Seca',                    time: '1 h',    tag: 'atq' },
+  ]},
+  { day: 'DOM', subject: '🔥 Simulado Discursivo',  weekend: true,  blocks: [
+    { label: 'Simulado Discursivo',         time: '3 h',    tag: 'sim' },
+    { label: 'Correção',                    time: '1 h',    tag: 'rev' },
+    { label: 'Revisão Geral',               time: '1 h',    tag: 'rev' },
+    { label: 'Anki Pesado',                 time: '1 h',    tag: 'con' },
+  ]},
+];
+
+const PROG_EMOJIS = ['🌱','🌿','🍃','🌲','🌳','🏅','🏆'];
+const TAG_LABELS  = { atq: 'Ataque', rev: 'Revisão', sim: 'Simulado', con: 'Anki' };
+
+let currentWeek = 'A';
+let state = {};
+
+// ─── Storage ───────────────────────────────────────────────────────
+function loadState() {
+  try { state = JSON.parse(localStorage.getItem('dpe_v4') || '{}'); } catch(e) { state = {}; }
+}
+
+function saveState() {
+  try { localStorage.setItem('dpe_v4', JSON.stringify(state)); } catch(e) {}
+  showToast();
+}
+
+function saveMeta() {
+  const m = {
+    q:      document.getElementById('meta-q').value,
+    acerto: document.getElementById('meta-acerto').value,
+    obj:    document.getElementById('meta-obj').value,
+    disc:   document.getElementById('meta-disc').value,
+    notas:  document.getElementById('notas').value,
+    r1:     document.getElementById('refl-1').value,
+    r2:     document.getElementById('refl-2').value,
+    r3:     document.getElementById('refl-3').value,
+  };
+  try { localStorage.setItem('dpe_meta4', JSON.stringify(m)); } catch(e) {}
+}
+
+function loadMeta() {
+  try {
+    const m = JSON.parse(localStorage.getItem('dpe_meta4') || '{}');
+    if (m.q)      document.getElementById('meta-q').value      = m.q;
+    if (m.acerto) document.getElementById('meta-acerto').value = m.acerto;
+    if (m.obj)    document.getElementById('meta-obj').value    = m.obj;
+    if (m.disc)   document.getElementById('meta-disc').value   = m.disc;
+    if (m.notas)  document.getElementById('notas').value       = m.notas;
+    if (m.r1)     document.getElementById('refl-1').value      = m.r1;
+    if (m.r2)     document.getElementById('refl-2').value      = m.r2;
+    if (m.r3)     document.getElementById('refl-3').value      = m.r3;
+  } catch(e) {}
+}
+
+// ─── Keys ──────────────────────────────────────────────────────────
+function key(w, di, bi)  { return `${w}_${di}_${bi}`; }
+function keyM(id)        { return `m_${id}`; }
+
+// ─── Render schedule ───────────────────────────────────────────────
+function renderSchedule() {
+  const cont  = document.getElementById('schedule');
+  const weeks = currentWeek === 'A' ? WEEK_A : WEEK_B;
+  cont.innerHTML = '';
+
+  weeks.forEach((dayData, di) => {
+    const total   = dayData.blocks.length;
+    const checked = dayData.blocks.filter((_, bi) => state[key(currentWeek, di, bi)]).length;
+    const isDone  = checked === total;
+
+    const card = document.createElement('article');
+    card.className = 'day-card' + (isDone ? ' complete' : '');
+    card.dataset.weekend = dayData.weekend;
+
+    const dots = dayData.blocks.map((_, bi) =>
+      `<div class="dot${state[key(currentWeek, di, bi)] ? ' done' : ''}"></div>`
+    ).join('');
+
+    const blocksHTML = dayData.blocks.map((b, bi) => {
+      const k  = key(currentWeek, di, bi);
+      const ch = state[k] || false;
+      return `
+        <div class="block${ch ? ' checked' : ''}"
+             role="checkbox"
+             aria-checked="${ch}"
+             tabindex="0"
+             onclick="toggleBlock(this,'${k}',${di})"
+             onkeydown="if(event.key==='Enter'||event.key===' ')toggleBlock(this,'${k}',${di})">
+          <div class="block-top">
+            <span class="tag tag-${b.tag}">${TAG_LABELS[b.tag]}</span>
+            <div class="block-chk" aria-hidden="true">${ch ? '✓' : ''}</div>
+          </div>
+          <div class="block-name">${b.label}</div>
+          <div class="block-time">⏱ ${b.time}</div>
+        </div>`;
+    }).join('');
+
+    card.innerHTML = `
+      <div class="day-header"
+           role="button"
+           aria-expanded="false"
+           tabindex="0"
+           onclick="toggleDay(this)"
+           onkeydown="if(event.key==='Enter')toggleDay(this)">
+        <div class="day-pill-wrap">
+          <div class="day-pill">${dayData.day}</div>
+        </div>
+        <div class="day-info">
+          <div class="day-subject">${dayData.subject}</div>
+          <div class="day-meta">⏱ ${dayData.weekend ? '~8 h' : '6 h líquidas'} &nbsp;·&nbsp; ${checked}/${total} blocos</div>
+        </div>
+        <div class="day-right">
+          <div class="dots" aria-hidden="true">${dots}</div>
+          <span class="chevron" aria-hidden="true">▾</span>
+        </div>
+      </div>
+      <div class="day-body" role="region" aria-label="Blocos de ${dayData.day}">
+        <div class="blocks-grid">${blocksHTML}</div>
+      </div>`;
+
+    cont.appendChild(card);
+  });
+}
+
+function toggleDay(header) {
+  const card = header.closest('.day-card');
+  const open = card.classList.toggle('open');
+  header.setAttribute('aria-expanded', open);
+}
+
+function toggleBlock(el, k, di) {
+  state[k] = !state[k];
+  el.classList.toggle('checked', state[k]);
+  el.setAttribute('aria-checked', state[k]);
+  el.querySelector('.block-chk').textContent = state[k] ? '✓' : '';
+  saveState();
+  updateProgress();
+  refreshDayHeader(di);
+}
+
+function refreshDayHeader(di) {
+  const weeks   = currentWeek === 'A' ? WEEK_A : WEEK_B;
+  const dayData = weeks[di];
+  const total   = dayData.blocks.length;
+  const checked = dayData.blocks.filter((_, bi) => state[key(currentWeek, di, bi)]).length;
+  const card    = document.querySelectorAll('.day-card')[di];
+
+  card.classList.toggle('complete', checked === total);
+  card.querySelector('.day-meta').textContent =
+    `⏱ ${dayData.weekend ? '~8 h' : '6 h líquidas'} · ${checked}/${total} blocos`;
+
+  const dots = card.querySelectorAll('.dot');
+  dayData.blocks.forEach((_, bi) => {
+    dots[bi]?.classList.toggle('done', !!state[key(currentWeek, di, bi)]);
+  });
+}
+
+// ─── Progress ──────────────────────────────────────────────────────
+function updateProgress() {
+  const weeks = currentWeek === 'A' ? WEEK_A : WEEK_B;
+  let total = 0, done = 0;
+  weeks.forEach((d, di) => {
+    d.blocks.forEach((_, bi) => {
+      total++;
+      if (state[key(currentWeek, di, bi)]) done++;
+    });
+  });
+  const pct  = total ? Math.round((done / total) * 100) : 0;
+  const idx  = Math.min(Math.floor(pct / 100 * PROG_EMOJIS.length), PROG_EMOJIS.length - 1);
+  document.getElementById('bar-fill').style.width  = pct + '%';
+  document.getElementById('prog-pct').textContent  = pct + '%';
+  document.getElementById('prog-emoji').textContent = PROG_EMOJIS[idx];
+}
+
+// ─── Week toggle ───────────────────────────────────────────────────
+function setWeek(w, btn) {
+  currentWeek = w;
+  document.querySelectorAll('.week-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderSchedule();
+  updateProgress();
+}
+
+// ─── Missão ────────────────────────────────────────────────────────
+function toggleMissao(el) {
+  el.classList.toggle('done');
+  const id = el.dataset.id;
+  state[keyM(id)] = el.classList.contains('done');
+  saveState();
+}
+
+function loadMissao() {
+  document.querySelectorAll('.missao-item').forEach(el => {
+    const id = el.dataset.id;
+    if (state[keyM(id)]) el.classList.add('done');
+  });
+}
+
+// ─── Reset ─────────────────────────────────────────────────────────
+function resetAll() {
+  if (!confirm('Resetar toda a semana? Isso apagará todo o progresso. 🌱')) return;
+  state = {};
+  try {
+    localStorage.removeItem('dpe_v4');
+    localStorage.removeItem('dpe_meta4');
+  } catch(e) {}
+  ['meta-q','meta-acerto','meta-obj','meta-disc','notas','refl-1','refl-2','refl-3']
+    .forEach(id => { document.getElementById(id).value = ''; });
+  document.querySelectorAll('.missao-item').forEach(el => el.classList.remove('done'));
+  renderSchedule();
+  updateProgress();
+}
+
+// ─── Toast ─────────────────────────────────────────────────────────
+let toastTimer;
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+// ─── PWA install ───────────────────────────────────────────────────
+let deferredPrompt = null;
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  setTimeout(() => {
+    document.getElementById('install-banner').classList.add('show');
+  }, 3000);
+});
+
+document.getElementById('btn-install-pwa').addEventListener('click', async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  const { outcome } = await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  dismissInstall();
+});
+
+function dismissInstall() {
+  document.getElementById('install-banner').classList.remove('show');
+}
+
+// ─── Init ──────────────────────────────────────────────────────────
+loadState();
+renderSchedule();
+updateProgress();
+loadMissao();
+loadMeta();
+</script>
+
+<!-- PWA Manifest inline -->
+<script>
+const manifest = {
+  name: 'DPE Maranhão — Reta Final',
+  short_name: 'DPE MA',
+  description: 'Cronograma de estudos para a Defensoria Pública do Maranhão',
+  start_url: '.',
+  display: 'standalone',
+  background_color: '#faf6ee',
+  theme_color: '#2e6b38',
+  icons: [
+    { src: 'https://api.iconify.design/emojione/balance-scale.svg?width=192&height=192', sizes: '192x192', type: 'image/svg+xml' },
+    { src: 'https://api.iconify.design/emojione/balance-scale.svg?width=512&height=512', sizes: '512x512', type: 'image/svg+xml' }
+  ]
+};
+const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+const url  = URL.createObjectURL(blob);
+const link = document.createElement('link');
+link.rel  = 'manifest';
+link.href = url;
+document.head.appendChild(link);
+</script>
+
+</body>
+</html>
