@@ -1,113 +1,114 @@
-# ⚖️ DPE — Reta Final
+# ⚖️ Defensoria Pública — Reta Final
 
-> Cronograma de estudos interativo para a Defensoria Pública do Maranhão.  
-> Funciona no celular, tablet e computador — inclusive sem internet após o primeiro acesso.
+> Cronograma de estudos interativo para concursos da Defensoria Pública.  
+> Funciona no celular, tablet e computador. Salva tudo automaticamente. Gera relatório semanal em PDF.
 
 ---
 
 ## ✨ Funcionalidades
 
-- 📅 **Semana A e B** — alterne entre as duas rotinas com um clique
-- ✅ **Blocos clicáveis** — marque cada atividade como concluída
-- 📊 **Barra de progresso** com emoji evolutivo (🌱 → 🏆)
-- 🎯 **Missão da semana** com checklist
-- 📝 **Meta numérica** — questões, acerto, simulado e discursiva
-- 📌 **Anotações** e **Reflexão do Domingo**
-- 💾 **Salvo automaticamente** no navegador (localStorage)
+| Aba | Recursos |
+|-----|----------|
+| 📅 **Cronograma** | Semana A e B, blocos clicáveis, barra de progresso, missão da semana, regras |
+| 📝 **Notas & Metas** | Meta numérica (questões, acerto, simulado, discursiva), anotações, reflexão do domingo |
+| 📊 **Relatório** | Resumo visual da semana com stats, progresso por dia, missões, metas — exportável em PDF |
+
+- 💾 **Salvo automaticamente** no navegador (sem login, sem servidor)
 - 📲 **Instalável como app** no celular (PWA)
+- 🖨️ **Exportar relatório semanal em PDF** com um clique
 
 ---
 
-## 🚀 Como usar no GitHub Pages
+## 🚀 Subir no GitHub Pages
 
-### 1. Crie o repositório
+### Passo 1 — Criar repositório
 
-```bash
-# Crie um repositório público no GitHub com o nome:
-dpe-maranhao-reta-final
-```
+Acesse [github.com/new](https://github.com/new) e crie um repositório **público**.  
+Sugestão de nome: `defensoria-reta-final`
 
-### 2. Faça o upload dos arquivos
+### Passo 2 — Fazer upload
 
-Opção A — pela interface do GitHub:
-1. Acesse o repositório → clique em **Add file → Upload files**
-2. Arraste o arquivo `index.html` para a área de upload
+**Pela interface web (mais fácil):**
+1. Abra o repositório → clique em **Add file → Upload files**
+2. Arraste o arquivo `index.html`
 3. Clique em **Commit changes**
 
-Opção B — pelo terminal:
+**Pelo terminal:**
 ```bash
-git clone https://github.com/SEU_USUARIO/dpe-maranhao-reta-final.git
-cd dpe-maranhao-reta-final
-cp /caminho/para/index.html .
+git clone https://github.com/SEU_USUARIO/defensoria-reta-final.git
+cd defensoria-reta-final
+# copie o index.html para esta pasta
 git add index.html
-git commit -m "Adiciona cronograma DPE Maranhão"
+git commit -m "Adiciona app Defensoria Pública — Reta Final"
 git push origin main
 ```
 
-### 3. Ative o GitHub Pages
+### Passo 3 — Ativar GitHub Pages
 
 1. Vá em **Settings → Pages**
-2. Em **Source**, selecione **Deploy from a branch**
-3. Escolha a branch `main` e a pasta `/ (root)`
+2. Em **Source** → selecione **Deploy from a branch**
+3. Branch: **main**, pasta: **/ (root)**
 4. Clique em **Save**
 
-### 4. Acesse o app
+### Passo 4 — Acessar
 
-Após alguns minutos, seu app estará disponível em:
+Após 1–2 minutos, seu app estará em:
 
 ```
-https://SEU_USUARIO.github.io/dpe-maranhao-reta-final/
+https://SEU_USUARIO.github.io/defensoria-reta-final/
 ```
 
 ---
 
-## 📲 Instalar no celular (como app)
+## 📲 Instalar como app no celular
 
 ### Android (Chrome)
 1. Abra o link no Chrome
-2. Aguarde o banner **"Instalar no dispositivo"** aparecer
-3. Toque em **Instalar** → o app aparecerá na sua tela inicial
+2. Toque no banner **"Adicionar à tela inicial"** ou no menu ⋮ → **"Instalar app"**
+3. O app aparecerá na sua tela inicial e funcionará offline
 
 ### iPhone / iPad (Safari)
 1. Abra o link no Safari
-2. Toque no ícone de **compartilhar** (quadrado com seta)
+2. Toque no ícone de compartilhar **⬆**
 3. Selecione **"Adicionar à Tela de Início"**
 4. Toque em **Adicionar**
 
 ---
 
-## 🖨️ Versão para impressão
+## 🖨️ Exportar Relatório Semanal em PDF
 
-O arquivo `DPE_Maranhao_Reta_Final.pdf` contém 4 páginas otimizadas para impressão A4:
+1. Vá na aba **📊 Relatório**
+2. Clique em **🖨️ Exportar PDF / Imprimir**
+3. Na janela de impressão:
+   - **Salvar como PDF** (no computador)
+   - **Impressora** (para imprimir em papel)
+   - No celular: selecione **"Salvar como PDF"** nas opções
 
-| Página | Conteúdo                             |
-|--------|--------------------------------------|
-| 1      | Capa + Missão da Semana              |
-| 2      | Rotina Semanal — Semana A            |
-| 3      | Rotina Semanal — Semana B            |
-| 4      | Regras do Modo Guerra + Metas + Reflexão |
-
----
-
-## 🛠️ Tecnologias
-
-- HTML5 + CSS3 + JavaScript puro (sem dependências)
-- Google Fonts: Playfair Display + Nunito
-- localStorage para persistência de dados
-- PWA (Progressive Web App) para instalação offline
+O relatório inclui:
+- % de blocos concluídos na semana
+- Missões cumpridas
+- Metas numéricas (questões, acerto, simulado, discursiva)
+- Progresso por dia com barras visuais
+- Anotações e pontos fracos
+- Reflexão do domingo
 
 ---
 
-## 📂 Estrutura do projeto
+## 📂 Estrutura
 
 ```
-dpe-maranhao-reta-final/
-├── index.html                  # App principal
-└── DPE_Maranhao_Reta_Final.pdf # PDF para impressão (opcional)
+defensoria-reta-final/
+└── index.html    # App completo (único arquivo, sem dependências)
 ```
+
+Tudo em um único arquivo HTML. Sem frameworks, sem servidores, sem instalações.
 
 ---
 
-## 📄 Licença
+## ⚙️ Personalização
 
-Uso pessoal. Boa sorte na prova! ⚖️🌿
+Para ajustar as matérias ou blocos, edite as constantes `WEEK_A` e `WEEK_B` dentro do `<script>` no `index.html`.
+
+---
+
+**Bons estudos! ⚖️🌿**
