@@ -1,4 +1,4 @@
-# ⚖️ DPE Maranhão — Reta Final
+# ⚖️ DPE — Reta Final
 
 > Cronograma de estudos interativo para a Defensoria Pública do Maranhão.  
 > Funciona no celular, tablet e computador — inclusive sem internet após o primeiro acesso.
