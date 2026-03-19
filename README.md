@@ -15,7 +15,6 @@
 - 📌 **Anotações** e **Reflexão do Domingo**
 - 💾 **Salvo automaticamente** no navegador (localStorage)
 - 📲 **Instalável como app** no celular (PWA)
-- 🖨️ **PDF para impressão** disponível em `DPE_Maranhao_Reta_Final.pdf`
 
 ---
 
